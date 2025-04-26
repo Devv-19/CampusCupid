@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusCupid</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Home Page Section -->
+  <section id="home">
+    <div class="container">
+      <h1>💘 CampusCupid</h1>
+      <p>Find your campus connection</p>
+      <div class="buttons">
+        <button class="btn" onclick="showSignUp()">Sign Up</button>
+        <button class="btn" onclick="showLogin()">Login</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sign Up Page Section -->
+  <section id="signup" style="display:none;">
+    <div class="form-container">
+      <h1>Create Account</h1>
+      <form id="signupForm">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="javascript:void(0)" onclick="showLogin()">Login</a></p>
+    </div>
+  </section>
+
+  <!-- Login Page Section -->
+  <section id="login" style="display:none;">
+    <div class="form-container">
+      <h1>Welcome Back</h1>
+      <form id="loginForm">
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit" class="btn">Login</button>
+      </form>
+      <p>Don't have an account? <a href="javascript:void(0)" onclick="showSignUp()">Sign Up</a></p>
+    </div>
+  </section>
+
+  <!-- Profile Page Section -->
+  <section id="profile" style="display:none;">
+    <div class="profile-container">
+      <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic" />
+      <h1>Alex Morgan</h1>
+      <p>Age: 21</p>
+      <p>Bio: "Loves coffee, coding, and late-night talks."</p>
+      <h3>Interests:</h3>
+      <ul class="interests">
+        <li>🎵 Music</li>
+        <li>🎬 Movies</li>
+        <li>💻 Coding</li>
+        <li>🏖️ Traveling</li>
+      </ul>
+      <button class="btn" onclick="showMatch()">Find a Match</button>
+    </div>
+  </section>
+
+  <!-- Match Page Section -->
+  <section id="match" style="display:none;">
+    <div class="match-container">
+      <div class="profile-card">
+        <img src="https://via.placeholder.com/150" alt="Profile Pic" class="match-pic" id="matchPic" />
+        <h2 id="matchName">Taylor Swift</h2>
+        <p id="matchBio">"Guitar, cats, and romantic songs 🎸🐱"</p>
+      </div>
+      <div class="match-buttons">
+        <button class="btn" onclick="likeMatch()">❤️ Like</button>
+        <button class="btn" onclick="nextMatch()">❌ Skip</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Page Section -->
+  <section id="contact" style="display:none;">
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <p id="thankYouMessage" style="display:none;">Thank you for reaching out! We'll get back to you soon. 💌</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
